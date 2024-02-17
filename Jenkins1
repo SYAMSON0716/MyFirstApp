@@ -1,0 +1,12 @@
+pipeline{
+agent {agent 'Jenkin-Agent'}
+Tools{
+jdk 'java21'
+maven 'maven3'
+}
+stages{
+  stages("cleanUp work space")
+    steps{
+    cleanws()
+}
+}
